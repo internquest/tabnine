@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('./fonts/RobotoMono-Regular.ttf') format('ttf'), ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header .wrapper {
+  @apply my-0 mx-auto z-[99]
+}
+
+@layer components {
+  .src-line {
+    @apply absolute right-0 left-0 h-full w-[1200px] border-l border-solid border-[#aab7d6] my-0 mx-auto z-[0];
+  }
+
+  .button-line-hor-wrapper {
+    @apply before:absolute before:content-[''] before:left-[50px] before:w-[59px] before:h-[1px] before:bg-[#ff2210] before:top-[65px]
+  }
+
+  .wrapper {
+    @apply max-w-[1200px] w-full my-0 mx-auto px-2.5 relative z-[3]
+  }
+
+  .half-video-item {
+    @apply align-baseline font-normal text-[16px] leading-[30px] text-white [list-style:none] relative pl-[20px] max-w-[440px] before:inline-block before:content-['-'] before:w-[1em] before:ml-[-20px] before:text-[#9464ec] before:absolute
+  }
+
+  .line-number {
+    @apply absolute left-0 w-[5px] h-[54px] z-[99] before:top-[6px] before:content-['20'] before:absolute before:left-[-20px] before:text-[14px] before:font-normal before:leading-[15px] before:text-[#7584a6] before:font-['Roboto_Mono'];
+
+
+  }
+
+  .slashes {
+    @apply absolute text-[22px] font-bold text-[#ff2210] mt-[3px] leading-[26px] first-of-type:left-[-21px];
+  }
+
+  .testimonial {
+    @apply relative pb-[112px]
+  }
+
+  .testimonial .slick-prev {
+    @apply w-[5px] h-[5px] bg-transparent !bottom-[-50px] top-auto left-[50px] transform-none inline-block before:absolute before:content-[''] before:w-[12px] before:h-[12px] before:left-0 before:bg-cover before:bg-no-repeat before:bg-[url('./assets/tabnineleftarrow.svg')] z-[4] text-[0px]
+  }
+
+  .testimonial .slick-next {
+    @apply w-[5px] h-[5px] bg-transparent bottom-[-50px] top-auto left-[154px] transform-none inline-block before:absolute before:content-[''] before:w-[12px] cursor-pointer before:h-[12px] before:left-0 before:bg-cover before:bg-no-repeat before:bg-[url('./assets/tabninerightarrow.svg')] z-[4]
+  }
+
+
+
+  .testimonial .slick-track {
+    @apply flex mx-auto
+  }
+
+  .testimonial .slick-slide {
+    @apply !h-[inherit] opacity-0
+  }
+
+  .testimonial_box {
+    @apply !flex flex-col h-full justify-between
+  }
+
+  .slick-slide.slick-active {
+    @apply opacity-100
+  }
+
+  .testimonial .slick-dots {
+    @apply bottom-[-76px] top-auto left-[65px] max-w-[84px] overflow-hidden whitespace-nowrap pt-0 px-0 pb-5 list-none right-0
+  }
+
+  .testimonial .slick-dots li {
+    @apply ml-[5px] mr-[5px] duration-200 ease-linear bg-none rounded-none h-auto w-auto
+  }
+
+  .testimonial .slick-dots li.slick-active button {
+    @apply bg-[#1f46c1]
+  }
+
+  .testimonial .slick-dots li button {
+    @apply w-[7px] h-[7px] cursor-pointer p-[3px] rounded-[15px] border-none bg-[#cad5ee] before:h-0 before:w-0
+  }
+
+
+  .testimonial-item {
+    @apply h-full font-medium min-h-[1px] mr-[58px] bg-[#131a3a] pt-[20px] pr-5 pb-5 pl-[50px] rounded-[8px] relative max-w-[291px] !flex box-content transition-opacity duration-[1s] ease-linear before:absolute before:content-[''] before:w-[35px] before:h-[100%] before:left-0 before:top-0 before:bg-[#060813] before:rounded-tl-[5px] before:rounded-bl-[5px] after:absolute after:content-['-_-_-_-_-_-'] after:w-[8px] after:left-[17px] after:top-[22px] after:text-[#2f4abf] after:z-[2] after:leading-[25px] after:font-bold after:text-[10px] after:bg-repeat
+  }
+
+  .logos_img {
+    @apply align-baseline mb-[40px] relative max-w-[60px] before:absolute before:content-[''] before:w-[15px] before:h-[15px] before:top-[20px] before:bg-[50%] before:bg-[url('./assets/tabnineplus.svg')] before:right-[-40px]
+  }
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+}
