@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={` antialiased w-full bg-white leading-[1]`}
+        className={` antialiased w-full overflow-x-hidden bg-white leading-[1]`}
       >
         <Navbar />
         {children}

@@ -4,6 +4,7 @@
 import React, { Component, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { inter, robotomono } from "../fonts/font";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 
 
@@ -14,18 +15,26 @@ import { inter, robotomono } from "../fonts/font";
 const SwipeToSlide = () => {
 
     const sliderref = useRef(null)
+    const { width: windowWidth } = useWindowSize()
+
+
+    useEffect(() => {
+        console.log(window.innerWidth)
+    }, [])
+
+    console.log(windowWidth);
     const settings = {
         dots: true,
         infinite: true,
         centerPadding: "60px",
-        slidesToShow: 3,
+        slidesToShow: windowWidth > 1250 ? 3 : windowWidth > 767 ? 2 : 1,
         autoplay: true,
         swipeToSlide: true,
-        speed: 1200,
+        speed: 1700,
         afterChange: function (index) {
-            console.log(
-                `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-            );
+            // console.log(
+            //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+            // );
         }
     };
 

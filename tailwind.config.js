@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      screens: {
+        't1260px': { 'max': '1260px' },
+        't1199px': { 'max': '1199px' },
+        't1050px': { 'max': '1050px' },
+        't950px': { 'max': '950px' },
+        't767px': { 'max': '767px' },
+        't580px': { 'max': '580px' },
+        'a1200px': { 'min': '1200px' },
+        'a1250px': { 'min': '1250px' },
+      },
       keyframes: {
         'scrollX': {
           '0%': { transform: 'translateX(0)' },

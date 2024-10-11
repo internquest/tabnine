@@ -32,8 +32,24 @@ header .wrapper {
 }
 
 @layer components {
+  .hero-title {
+    @apply font-black text-[75px] leading-[90px] relative pl-[80px] mb-[4px] w-full box-border min-h-[90px] t580px:text-[33px] t580px:leading-[36px] t580px:pl-[30px] t580px:pr-[10px] t580px:mb-2 t767px:text-[45px] t767px:leading-[60px] t767px:pl-[30px] t767px:pr-[10px] t767px:mb-0 t1050px:text-[55px] inline-block t1050px:leading-[70px] t1050px:pl-[50px]
+  }
+
+  .hero-title .hero-red {
+    @apply t580px:text-[27px] t580px:leading-[32px] t580px:mt-[2px] t767px:text-[34px] t767px:leading-[52px] t1050px:text-[46px] t1050px:leading-[60px] text-[rgb(255_34_16)] font-extrabold text-[63px] leading-[78px] absolute mt-[3px]
+  }
+
+  .hero-title .hero-red:last-of-type {
+    @apply ml-1
+  }
+
   .src-line {
-    @apply absolute right-0 left-0 h-full w-[1200px] border-l border-solid border-[#aab7d6] my-0 mx-auto z-[0];
+    @apply absolute right-0 left-0 h-full w-[1200px] border-l border-solid border-[#aab7d6] my-0 mx-auto z-[0] t1260px:hidden;
+  }
+
+  .hero-detail {
+    @apply align-baseline inline-block t580px:mb-[25px] t767px:mr-[5px]
   }
 
   .button-line-hor-wrapper {
@@ -41,12 +57,74 @@ header .wrapper {
   }
 
   .wrapper {
-    @apply max-w-[1200px] w-full my-0 mx-auto px-2.5 relative z-[3]
+    @apply box-content t1260px:box-border max-w-[1200px] w-full my-0 mx-auto px-2.5 relative z-[3]
   }
 
-  .half-video-item {
-    @apply align-baseline font-normal text-[16px] leading-[30px] text-white [list-style:none] relative pl-[20px] max-w-[440px] before:inline-block before:content-['-'] before:w-[1em] before:ml-[-20px] before:text-[#9464ec] before:absolute
+  .half-text-item {
+    @apply m-0 p-[20px] border-[0px] align-top inline-block w-[calc(50%-40px)] box-border t767px:block t767px:w-full t767px:relative t767px:before:content-[''] t767px:before:absolute t767px:before:left-[9px] t767px:before:top-[46px] t767px:before:w-[1px] t767px:before:h-[calc(100%-66px)] t767px:before:bg-[#b5c3e3]
   }
+
+  .half-text-wrapper {
+    @apply align-baseline max-w-[430px] t1050px:mb-[10px] mb-[20px]
+  }
+
+  .half-text-red {
+    @apply align-baseline text-[25px] leading-[26px] text-[rgb(255_34_16)] font-bold bg-[rgb(255_255_255)] inline absolute mt-[2px] t767px:text-[19px] t767px:leading-[22px] t1050px:text-[20px] t1050px:leading-[24px]
+  }
+
+  .half-text-red:first-of-type {
+    @apply t1050px:left-[-18px]
+  }
+
+  .half-text-title {
+    @apply align-baseline t1050px:text-[22px] text-[25px] leading-[30px] text-[rgb(19_26_58)] font-bold inline bg-[rgb(240_245_255)] mb-[15px] t767px:text-[19px] t767px:leading-[23px]
+  }
+
+
+  .half-text-red:last-of-type {
+    @apply ml-[4px]
+  }
+
+  .half-text-subtitle {
+    @apply align-baseline relative t1050px:text-[15px] text-[16px] leading-[22px] text-[rgb(19_26_58)] font-normal pl-[20px] t1050px:mb-[10px] max-w-[440px] md:before:content-[''] md:before:absolute md:before:left-[-1px] md:before:top-[-8px] md:before:w-[1px] md:before:h-[calc(100%+97px)] md:before:bg-[#b5c3e3] t767px:pl-0 t767px:text-[14px]
+  }
+
+  .half-text-subtitle .line-number {
+    @apply ml-[-50px]
+  }
+
+  .half-text-button-wrapper .line-number {
+    @apply left-[-50px] top-[50%] -translate-y-1/2
+  }
+
+  .half-text-button {
+    @apply m-0 px-[15px] py-[6px] border-[0px] align-baseline font-bold italic text-[14px] leading-[27px] text-[rgb(255_255_255)] bg-[rgb(255_34_16)] rounded-br-[10px] rounded-tr-[10px] inline-block mb-[50px] mt-[50px] no-underline -ml-px relative t767px:mb-0 t767px:ml-[-10px] t767px:py-[3px] t767px:px-[12px] t767px:text-[12px] t767px:rounded-tr-[7px] t767px:rounded-br-[7px]
+  }
+
+  .half .wrapper {
+    @apply t950px:flex t950px:flex-col-reverse
+  }
+
+  .half-item {
+    @apply align-baseline font-normal text-[16px] leading-[30px] text-white [list-style:none] relative pl-[20px] max-w-[440px] before:inline-block before:content-['-'] before:w-[1em] before:ml-[-20px] before:text-[#9464ec] before:absolute t767px:text-[14px] t767px:pl-[25px] t767px:leading-[22px]
+  }
+
+
+
+
+  .half-block:first-of-type {
+    @apply mt-[50px] t767px:pr-[30px] t950px:mt-0 t767px:before:content-[''] t767px:before:absolute t767px:before:w-[1px] t767px:before:h-[calc(100%-80px)] t767px:before:bg-[#1f3d9c] t767px:before:left-[12px] t767px:before:top-[30px]
+  }
+
+  .half-list {
+    @apply box-border t767px:pl-0 t767px:ml-[20px] align-baseline [list-style:none] pl-[40px] relative ml-[30px] md:before:content-[''] md:before:absolute md:before:left-[9px] md:before:top-[0px] md:before:w-[1px] md:before:h-[calc(100%+77px)] md:before:bg-[#1f3d9c]
+  }
+
+  .half-video-button {
+    @apply m-0 t767px:ml-[13px] t767px:text-[12px] t767px:py-[3px] t767px:px-3 t767px:mb-[30px] px-[15px] py-[6px] align-baseline font-bold italic text-[14px] leading-[27px] text-[rgb(255_255_255)] bg-[rgb(255_34_16)] rounded-br-[10px] rounded-tr-[10px] inline-block mb-[50px] mt-[40px] no-underline relative ml-[40px]
+  }
+
+
 
   .line-number {
     @apply absolute left-0 w-[5px] h-[54px] z-[99] before:top-[6px] before:content-['20'] before:absolute before:left-[-20px] before:text-[14px] before:font-normal before:leading-[15px] before:text-[#7584a6] before:font-['Roboto_Mono'];
@@ -54,8 +132,8 @@ header .wrapper {
 
   }
 
-  .slashes {
-    @apply absolute text-[22px] font-bold text-[#ff2210] mt-[3px] leading-[26px] first-of-type:left-[-21px];
+  .testimonial-red {
+    @apply absolute text-[22px] font-bold text-[#ff2210] mt-[3px] leading-[26px] first-of-type:left-[-21px] t767px:first-of-type:left-[-17px] t767px:text-[18px] t767px:leading-[20px] t767px:text-[#131a3a] t767px:mt-[2px] last-of-type:ml-[4px];
   }
 
   .testimonial {
@@ -85,6 +163,14 @@ header .wrapper {
   }
 
   .slick-slide.slick-active {
+    @apply a1250px:opacity-100
+  }
+
+  .slick-track {
+    @apply flex
+  }
+
+  .slick-slide.slick-current.slick-active {
     @apply opacity-100
   }
 
@@ -109,10 +195,27 @@ header .wrapper {
     @apply h-full font-medium min-h-[1px] mr-[58px] bg-[#131a3a] pt-[20px] pr-5 pb-5 pl-[50px] rounded-[8px] relative max-w-[291px] !flex box-content transition-opacity duration-[1s] ease-linear before:absolute before:content-[''] before:w-[35px] before:h-[100%] before:left-0 before:top-0 before:bg-[#060813] before:rounded-tl-[5px] before:rounded-bl-[5px] after:absolute after:content-['-_-_-_-_-_-'] after:w-[8px] after:left-[17px] after:top-[22px] after:text-[#2f4abf] after:z-[2] after:leading-[25px] after:font-bold after:text-[10px] after:bg-repeat
   }
 
-  .logos_img {
-    @apply align-baseline mb-[40px] relative max-w-[60px] before:absolute before:content-[''] before:w-[15px] before:h-[15px] before:top-[20px] before:bg-[50%] before:bg-[url('./assets/tabnineplus.svg')] before:right-[-40px]
+  .logos-indi {
+    @apply w-[15%] t767px:w-full t767px:mr-[110px]
   }
 
+  .logos_img {
+    @apply align-baseline mb-[40px] relative max-w-[60px] before:absolute before:content-[''] before:w-[15px] before:h-[15px] before:top-[20px] before:bg-[50%] before:bg-[url('./assets/tabnineplus.svg')] before:right-[-40px] t767px:top-[15px] t767px:max-w-[43px]
+  }
+
+  .logos-red {
+    @apply text-[22px] font-bold leading-[26px] text-[rgb(255_34_16)] absolute mt-[1px] t767px:text-[20px] t767px:leading-[24px] last-of-type:ml-[4px]
+  }
+
+  .logos-wrapper {
+    @apply align-baseline pl-[20px] flex [flex-flow:wrap] items-start justify-between max-w-[750px] t767px:grid t767px:grid-cols-[auto_auto_auto] t767px:justify-start
+  }
+
+
+}
+
+.half-block {
+  @apply t1260px:w-[50%] t950px:w-full t1260px:mr-0 t1260px:pr-5 t767px:relative t767px:box-border t767px:pl-0
 }
 
 @layer utilities {
