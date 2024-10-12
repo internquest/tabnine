@@ -36,7 +36,7 @@ header .wrapper {
     @apply font-black text-[75px] leading-[90px] relative pl-[80px] mb-[4px] w-full box-border min-h-[90px] t580px:text-[33px] t580px:leading-[36px] t580px:pl-[30px] t580px:pr-[10px] t580px:mb-2 t767px:text-[45px] t767px:leading-[60px] t767px:pl-[30px] t767px:pr-[10px] t767px:mb-0 t1050px:text-[55px] inline-block t1050px:leading-[70px] t1050px:pl-[50px]
   }
 
-  .hero-title .hero-red {
+  .hero-red {
     @apply t580px:text-[27px] t580px:leading-[32px] t580px:mt-[2px] t767px:text-[34px] t767px:leading-[52px] t1050px:text-[46px] t1050px:leading-[60px] text-[rgb(255_34_16)] font-extrabold text-[63px] leading-[78px] absolute mt-[3px]
   }
 
@@ -211,6 +211,25 @@ header .wrapper {
     @apply align-baseline pl-[20px] flex [flex-flow:wrap] items-start justify-between max-w-[750px] t767px:grid t767px:grid-cols-[auto_auto_auto] t767px:justify-start
   }
 
+  .a-hero-red {
+    @apply text-[#ff2210] absolute text-[65px] font-extrabold leading-[78px] text-left first-of-type:left-[24px] first-of-type:mt-[2px] t767px:first-of-type:left-[5px] t767px:first-of-type:mt-[2px] t950px:first-of-type:left-[37px] t950px:mt-[-2px] t767px:text-[27px] t767px:leading-[32px] t950px:text-[38px] t950px:leading-[50px] t767px:last-of-type:mt-[2px] t950px:last-of-type:mt-[2px]
+  }
+
+  .col-red {
+    @apply t767px:text-[20px] t767px:leading-[26px] text-[rgb(68_86_170)] text-[32px] font-extrabold leading-[41.6px] absolute t767px:first-of-type:top-auto t767px:first-of-type:left-[17px] t767px:first-of-type:mt-[-2px] first-of-type:top-px first-of-type:left-[27px] last-of-type:ml-1 t767px:last-of-type:mt-[-2px]
+  }
+
+  .col-item {
+    @apply align-baseline max-w-[300px] mr-[20px] ml-[30px] t950px:mb-[40px]
+  }
+
+  .a-logos-bracket {
+    @apply text-[38.96px] font-normal leading-[47px] text-[#cad5ee] relative top-[-20px] first-of-type:absolute first-of-type:top-[-4px] first-of-type:-left-[20px] t950px:first-of-type:bottom-[20px] t950px:first-of-type:right-0 t950px:bottom-[20px] t950px:right-0
+  }
+
+  .a-logo {
+    @apply w-1/5 mb-[35px] text-center t950px:w-[32%]
+  }
 
 }
 

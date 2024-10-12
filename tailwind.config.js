@@ -10,13 +10,14 @@ module.exports = {
 
       screens: {
         't1260px': { 'max': '1260px' },
+        't1200px': { 'max': '1200px' },
         't1199px': { 'max': '1199px' },
         't1050px': { 'max': '1050px' },
         't950px': { 'max': '950px' },
         't767px': { 'max': '767px' },
         't580px': { 'max': '580px' },
-        'a1200px': { 'min': '1200px' },
         'a1250px': { 'min': '1250px' },
+        'a1200px': { 'min': '1200px' },
       },
       keyframes: {
         'scrollX': {

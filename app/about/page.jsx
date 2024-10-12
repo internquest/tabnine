@@ -1,18 +1,19 @@
 import React from 'react'
+import { inter, robotomono } from '../fonts/font'
 // Add this import at the top of your file
-import { Roboto_Mono, Inter } from 'next/font/google'
+// import { Roboto_Mono, Inter } from 'next/font/google'
 
 // Initialize the font
-const robotomono = Roboto_Mono({
-    weight: ['400', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-})
-const inter = Inter({
-    weight: ['400', '700'],
-    subsets: ['latin'],
-    display: 'swap',
-})
+// const robotomono = Roboto_Mono({
+//     weight: ['400', '700'],
+//     subsets: ['latin'],
+//     display: 'swap',
+// })
+// const inter = Inter({
+//     weight: ['400', '700'],
+//     subsets: ['latin'],
+//     display: 'swap',
+// })
 
 const page = () => {
     return (
@@ -20,41 +21,58 @@ const page = () => {
         <>
             <section className={`relative `}>
                 <div className='src-line'></div>
-                <div className='wrapper box-content mx-auto'>
+                <div className='wrapper  mx-auto'>
 
-                    <div class=" align-baseline relative pl-[80px] mb-[27px] pt-[100px]">
-                        <span class=" align-baseline  text-[65px] font-extrabold leading-[78px] text-left text-[rgb(255,_34,_16)] absolute left-[24px] mt-[2px]">//</span>
-                        <h1 class=" align-baseline  text-[75px] font-black leading-[90px] text-left text-[rgb(19,_26,_58)] inline">
+                    <div class={` align-baseline t767px:pl-[30px] t767px:pt-[8px] t950px:pt-[50px] relative pl-[80px] mb-[27px] pt-[100px] ${inter.className}`}>
+                        <span class={` a-hero-red ${inter.className}`}>//</span>
+                        <h1 class=" align-baseline  text-[75px] t950px:text-[45px] t767px:text-[33px] t767px:leading-[36px] t950px:leading-[55px] font-black leading-[90px] text-left text-[rgb(19,_26,_58)] inline">
                             <div class="line-number before:content-['2'] before:top-[35px] "></div>We're Tabnine
                         </h1>
-                        <span class=" align-baseline  text-[65px] font-extrabold leading-[78px] text-left text-[rgb(255,_34,_16)] absolute ml-[4px] mt-[2px]">//</span>
+                        <span class="a-hero-red">//</span>
                     </div>
-                    <div class={` ${robotomono.className} align-baseline relative text-[20px] leading-[28px] text-left pl-[80px] mb-[40px]  font-normal text-[rgb(19,_26,_58)]`}>
+                    <div class={` ${robotomono.className} box-content align-baseline relative t767px:text-[16px] t767px:leading-[21px] t767px:pl-[30px] t767px:max-w-[270px] t950px:text-[18px] t950px:leading-[24px] text-[20px] leading-[28px] text-left pl-[80px] mb-[40px]  font-normal text-[rgb(19,_26,_58)]`}>
                         <div class={` line-number before:content-['3'] before:top-[10px] `}></div>We’re building the future of AI-assisted software development.
                     </div>
-                    <div class={` align-baseline relative font-['Roboto_Mono',_sans-serif] font-normal text-[rgb(19,_26,_58)] text-[16px] leading-[25.6px] pl-[25px] max-w-[864px] mb-[80px] ${robotomono.className}`}>
+                    <div class={` align-baseline relative t767px:text-[14px] t767px:leading-[22px] t767px:mb-[44px] font-normal text-[rgb(19,_26,_58)] text-[16px] leading-[25.6px] pl-[25px] max-w-[864px] mb-[80px] ${robotomono.className}`}>
                         <div class=" line-number before:content-['4'] before:top-[4px]"></div>Since we launched our first AI code assistant in 2018, Tabnine has been a pioneer in generative AI for software development. Trusted by more than one million users and thousands of organizations, Tabnine’s mission is to accelerate and simplify the entire software development life cycle through AI.
                     </div>
                 </div>
-                <div className='relative z-[-1] mt-[-180px] text-[0px]'>
+                <div className='relative z-[-1] t767px:hidden t1050px:mt-[-70px] mt-[-180px] text-[0px]'>
                     <img src="https://www.tabnine.com/wp-content/themes/tabnine/dist/images/a-shape1.svg" alt="" className='w-full' />
+                </div>
+
+                <div class="hidden t767px:block">
+                    <svg style={{ marginBottom: "-1px", width: '100%', height: '100%' }} xmlns="http://www.w3.org/2000/svg" width="362" height="111" viewBox="0 0 362 111" fill="none">
+                        <rect width="362" height="111" fill="white"></rect>
+                        <path d="M277.781 0H248.041V97H277.781V0Z" fill="#EDF2FF"></path>
+                        <path d="M362.001 0H298.406V97H362.001V0Z" fill="#EDF2FF"></path>
+                        <path d="M226.527 0H201.85V97H226.527V0Z" fill="#EDF2FF"></path>
+                        <path d="M182.865 0H161.352V97H182.865V0Z" fill="#EDF2FF"></path>
+                        <path d="M141.739 0H122.756V97H141.739V0Z" fill="#EDF2FF"></path>
+                        <path d="M101.878 0H88.5898V97H101.878V0Z" fill="#EDF2FF"></path>
+                        <path d="M67.0771 0H55.0547V97H67.0771V0Z" fill="#EDF2FF"></path>
+                        <path d="M33.5365 0H25.9434V97H33.5365V0Z" fill="#EDF2FF"></path>
+                        <path d="M5.19783 0H0V97H5.19783V0Z" fill="#EDF2FF"></path>
+                        <path d="M362 101H312.5L232 48L0 48V111H160H256.5H362V101Z" fill="#131A3A"></path>
+                        <path d="M362 101H312.275L231.962 48L0 48" stroke="#1F46C1" stroke-width="13" stroke-miterlimit="10"></path>
+                    </svg>
                 </div>
 
             </section>
 
             <section className='relative bg-[#131a3a]'>
                 <div className='src-line'></div>
-                <div className='wrapper box-content mx-auto'>
-                    <div class=" align-baseline relative pl-[57px] mb-[67px] max-w-[690px]">
-                        <span class={` align-baseline text-[rgb(68,_86,_170)] ${inter.className} text-[32px] font-extrabold leading-[41.6px] absolute top-px left-[27px]`}>//</span>
-                        <h2 class={` align-baseline  text-[36px] font-extrabold leading-[47px] text-[rgb(255,_255,_255)] inline bg-[rgb(12,_16,_37)] ${inter.className}`}>
-                            <div class="line-number before:content-['5'] before:top-[15px]"></div>Unlike other AI code assistants, Tabnine is
+                <div className='wrapper  mx-auto'>
+                    <div class=" align-baseline relative t767px:pr-[20px] t767px:pt-0 t767px:mb-[60px] t767px:pl-[37px] t767px:max-w-[260px] pl-[57px] mb-[67px] max-w-[690px]">
+                        <span class={` align-baseline col-red ${inter.className} `}>//</span>
+                        <h2 class={` align-baseline   t767px:text-[22px] t767px:leading-[25px]  text-[36px] font-extrabold leading-[47px] text-[rgb(255,_255,_255)] inline bg-[rgb(12,_16,_37)] ${inter.className}`}>
+                            <div class="line-number before:content-['5'] before:top-[15px]"></div>Unlike other AI code assistants, Tabnine is {' '}
                             <span class=" align-baseline text-[rgb(148,_101,_236)]"> Al that you control</span>
                         </h2>
-                        <span class={` align-baseline text-[rgb(68,_86,_170)]  text-[32px] font-extrabold leading-[41.6px] absolute ml-[4px] ${inter.className} `}>//</span>
+                        <span class={`col-red ${inter.className} `}>//</span>
                     </div>
-                    <div class=" align-baseline relative flex justify-between pb-[80px]">
-                        <div class=" align-baseline max-w-[300px] mr-[20px] ml-[30px]">
+                    <div class=" align-baseline relative flex t950px:flex-col justify-between pb-[80px]">
+                        <div class=" col-item">
                             <div class=" align-baseline">
                                 <img alt="Group 1427" src="https://www.tabnine.com/wp-content/uploads/2024/04/Group-1427.svg" class=" align-baseline"></img>
                                 <h2 class={` align-baseline  text-[22px] font-extrabold leading-[27px] text-[rgb(255,_255,_255)] mt-[27px] mb-[10px] ${inter.className}`}>
@@ -63,7 +81,7 @@ const page = () => {
                             </div>
                             <p class={`${robotomono.className} align-baseline font-['Roboto_Mono',_sans-serif] text-[16px] font-normal leading-[24px] text-[rgb(255,_255,_255)] inline bg-[rgb(12,_16,_37)]`}>Maximize control over your IP by choosing where and how to deploy Tabnine (as SaaS, on VPC, or on-premises) — and rest easily knowing that we never store or share any of your company’s code.</p>
                         </div>
-                        <div class=" align-baseline max-w-[300px] mr-[20px] ml-[30px]">
+                        <div class=" col-item">
                             <div class=" align-baseline">
                                 <img alt="Group 1428" src="https://www.tabnine.com/wp-content/uploads/2024/04/Group-1428.svg" class=" align-baseline"></img>
                                 <h2 class={` align-baseline  text-[22px] font-extrabold leading-[27px] text-[rgb(255,_255,_255)] mt-[27px] mb-[10px] ${inter.className}`}>
@@ -72,7 +90,7 @@ const page = () => {
                             </div>
                             <p class={`${robotomono.className} align-baseline font-['Roboto_Mono',_sans-serif] text-[16px] font-normal leading-[24px] text-[rgb(255,_255,_255)] inline bg-[rgb(12,_16,_37)]`}>Take advantage of highly personalized, context-aware recommendations for every developer and engineering team through local code awareness and integration with your global codebase.</p>
                         </div>
-                        <div class=" align-baseline max-w-[300px] mr-[20px] ml-[30px]">
+                        <div class=" col-item">
                             <div class=" align-baseline">
                                 <img alt="Group 1429" src="https://www.tabnine.com/wp-content/uploads/2024/04/Group-1429.svg" class=" align-baseline"></img>
                                 <h2 class={` align-baseline  text-[22px] font-extrabold leading-[27px] text-[rgb(255,_255,_255)] mt-[27px] mb-[10px] ${inter.className}`}>
@@ -90,7 +108,7 @@ const page = () => {
                 <div className='relative text-[0px]'>
                     <img src="https://www.tabnine.com/wp-content/themes/tabnine/dist/images/a-shape3.svg" alt="" />
                 </div>
-                <div className='wrapper box-content mx-auto'>
+                <div className='wrapper  mx-auto'>
                     <div class=" align-baseline pl-[40px] relative inline-block pr-[10px]">
                         <span class={` align-baseline  text-[22px] font-extrabold leading-[29px] text-[rgb(255,_34,_16)] absolute top-[2px] left-[18px] ${inter.className}`}>//</span>
                         <h2 class={` align-baseline  text-[25px] font-extrabold leading-[33px] text-[rgb(19,_26,_58)] inline bg-[rgb(240,_245,_255)] mr-[5px] ${inter.className}`}>
@@ -103,33 +121,33 @@ const page = () => {
                     <div class=" align-baseline relative">
                         <div class=" line-number before:content-['8'] before:top-[15px]"></div>
                         <div className=" align-baseline block">
-                            <div className=" align-baseline flex flex-wrap ml-[35px] mt-[50px] pb-[50px] justify-start items-center relative">
-                                <div className=" align-baseline  text-[38.96px] font-normal leading-[47px] text-[rgb(202,_213,_238)] absolute -top-[4px] -left-[20px]">{'{'}</div>
-                                <div className=" align-baseline w-1/5 mb-[35px] text-center">
+                            <div className=" align-baseline flex flex-wrap ml-[35px] mt-[50px]  pb-[50px] justify-start items-center relative">
+                                <div className=" a-logos-bracket">{'{'}</div>
+                                <div className=" a-logo">
                                     <img alt="Atlassian" src="https://www.tabnine.com/wp-content/uploads/2024/04/Atlassian.svg" className=" align-baseline" />
                                 </div>
-                                <div className=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div className=" a-logo">
                                     <img alt="Elaia" src="https://www.tabnine.com/wp-content/uploads/2024/04/Elaia.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="Headline" src="https://www.tabnine.com/wp-content/uploads/2024/04/Headline.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="hetz" src="https://www.tabnine.com/wp-content/uploads/2024/04/hetz.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="khosla" src="https://www.tabnine.com/wp-content/uploads/2024/04/khosla.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="Qualcomm" src="https://www.tabnine.com/wp-content/uploads/2024/04/Qualcomm.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="telstra" src="https://www.tabnine.com/wp-content/uploads/2024/04/telstra.svg" class=" align-baseline"></img>
                                 </div>
-                                <div class=" align-baseline w-1/5 mb-[35px] text-center">
+                                <div class=" a-logo">
                                     <img alt="tpy" src="https://www.tabnine.com/wp-content/uploads/2024/04/tpy.svg" class=" align-baseline" />
                                 </div>
-                                <div class=" align-baseline  text-[38.96px] font-normal leading-[47px] text-[rgb(202,_213,_238)] relative -top-[20px]">{'}'}</div>
+                                <div className=" a-logos-bracket">{'}'}</div>
                             </div>
                         </div>
                         <div class=" align-baseline hidden">
@@ -150,7 +168,7 @@ const page = () => {
                 <div className=' right-0 left-auto relative max-w-[290px] text-right float-right h-[70px]'>
                     <img src="https://www.tabnine.com/wp-content/themes/tabnine/dist/images/a-shape4.svg" alt="" />
                 </div>
-                <div className='wrapper box-content mx-auto'>
+                <div className='wrapper  mx-auto'>
                     <div class=" align-baseline pl-[40px] relative pt-[60px] max-w-[1000px] mb-[40px] pr-[15px]">
                         <span class={` align-baseline  text-[22px] font-extrabold leading-[29px] text-[rgb(255,_34,_16)] absolute left-[18px] mt-px ${inter.className}`}>//</span>
                         <h2 class={` align-baseline  text-[25px] font-extrabold leading-[33px] text-[rgb(19,_26,_58)] inline bg-[rgb(240,_245,_255)] ${inter.className}`}>
@@ -235,20 +253,20 @@ const page = () => {
                 <div className='relative w-max max-w-[40%] left-auto text-right float-right h-[130px] '>
                     <img src="https://www.tabnine.com/wp-content/themes/tabnine/dist/images/a-shape5.svg" alt="" />
                 </div>
-                <div className='wrapper box-content mx-auto'>
+                <div className='wrapper  mx-auto'>
                     <div class=" align-baseline pl-[40px] relative pt-[100px] max-w-[1000px] mb-[20px]">
-                        <span class={` align-baseline font-[Inter,_sans-serif] text-[32px] font-extrabold leading-[29px] text-[rgb(255,_34,_16)] absolute left-[8px] mt-[6px] ${inter.className}`}>//</span>
+                        <span class={` align-baseline text-[32px] font-extrabold leading-[29px] text-[rgb(255,_34,_16)] absolute left-[8px] mt-[6px] ${inter.className}`}>//</span>
                         <h2 class={` align-baseline font-[Inter,_sans-serif] text-[36px] font-extrabold leading-[47px] text-[rgb(19,_26,_58)] inline bg-[rgb(240,_245,_255)] ${inter.className}`}>
                             <div class=" line-number before:content-['14'] before:top-[14px] before:left-[-30px]"></div>Want to
                             <span class=" align-baseline text-[rgb(31,_70,_193)]"> be a part</span> of Tabnine?
                         </h2>
                         <span class={` ${inter.className} align-baseline font-[Inter,_sans-serif] text-[32px] font-extrabold leading-[29px] text-[rgb(255,_34,_16)] absolute ml-[4px] mt-[6px]`}>//</span>
                     </div>
-                    <div class={` align-baseline relative font-['Roboto_Mono',_sans-serif] text-[16px] font-normal leading-[26px] text-[rgb(19,_26,_58)] max-w-[630px] pl-[44px] mb-[20px] ${robotomono.className}`}>
+                    <div class={` align-baseline relative text-[16px] font-normal leading-[26px] text-[rgb(19,_26,_58)] max-w-[630px] pl-[44px] mb-[20px] ${robotomono.className}`}>
                         <div class=" line-number before:content-['15'] before:top-[4px] before:left-[-30px]"></div>If you’re a passionate, open-minded thinker who wants to
                         <br></br>build the future with us, we want to hear from you.
                     </div>
-                    <div class=" align-baseline box-content relative w-max pb-[20px] button-line-hor-wrapper after:absolute after:content-[''] after:left-[0px] after:w-[51px] after:h-[122px]  after:top-[4px] after:bg-no-repeat after:bg-[50%] after:bg-contain after:bg-[url('./assets/tabninehalfbox.svg')]">
+                    <div class=" align-baseline t1200px:ml-[-10px] box-content relative w-max pb-[20px] button-line-hor-wrapper after:absolute after:content-[''] after:left-[0px] after:w-[51px] after:h-[122px]  after:top-[4px] after:bg-no-repeat after:bg-[50%] after:bg-contain after:bg-[url('./assets/tabninehalfbox.svg')]">
                         <div class=" line-number before:content-['16'] before:top-[-10px] top-[50%] translate-y-[-50%] before:left-[-30px]"></div>
                         <a href="/careers/" target="" class={` m-0 pt-[12px] box-content px-[24px] pb-[11px] align-baseline hover:bg-[#df1a0a] bg-[rgb(255,_34,_16)] rounded-[13px] text-center no-underline font-['Roboto_Mono',_sans-serif] font-bold text-[16px] leading-[27px] text-[rgb(255,_255,_255)] inline-block relative mt-[40px] mb-[80px] ml-[104px]  ${robotomono.className}`}>View open positions</a>
                     </div>
