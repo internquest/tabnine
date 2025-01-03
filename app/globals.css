@@ -287,6 +287,11 @@ header .wrapper {
     @apply t767px:text-[22px] t767px:leading-[20px] text-[32px] font-extrabold leading-[29px] text-[rgb(255_34_16)] absolute t767px:first-of-type:left-[18px] t767px:first-of-type:mt-[2px] first-of-type:left-[8px] first-of-type:mt-[6px] t767px:last-of-type:mt-[2px] last-of-type:ml-[4px] last-of-type:mt-[6px] inline
   }
 
+
+  .social-icon {
+    @apply bg-[rgba(0_0_0_0)] box-border max-w-full flex text-[rgb(161_161_161)] font-bold no-underline gap-x-[8px] backdrop-filter backdrop-blur-[3px] bg-[linear-gradient(to_right_rgba(229_156_255_0.24)_rgba(186_156_255_0.24)_50%_rgba(156_178_255_0.24))] rounded-[32px] flex-initial justify-start items-center px-[10px] py-[6px] absolute top-[79%] left-[20%] [box-shadow:rgba(164_143_255_0.12)_0px_-7px_11px_inset]
+  }
+
 }
 
 .half-block {
